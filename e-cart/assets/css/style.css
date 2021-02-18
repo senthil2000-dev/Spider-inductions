@@ -1,0 +1,280 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+body {
+  background: black;
+  color: white;
+}
+#sideBar {
+    z-index: 100;
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: deeppink;
+    left: -200px;
+    transition: all 300ms linear;
+}
+#sideBar.active {
+    left: 0px;
+}
+ #sideBar ul li {
+     list-style: none;
+     padding: 15px 10px;
+     border-bottom: 1px solid rgb(100,100,100,0.3);
+     display: flex;
+     align-items: flex-end;
+     cursor: pointer;
+ }
+
+ #sideBar ul li:hover {
+    background-color: darkblue;
+    color: white;
+ }
+
+ #sideBar .toggle-btn{
+    position: absolute;
+    left: 210px;
+    top: 5px;
+ }
+
+ #sideBar .toggle-btn span {
+     display: block;
+     width: 30px;
+     height: 5px;
+     background: white;
+     margin: 5px 0px;
+ }
+
+ .btn {
+    background: #4285f4;
+    color: #fff;
+    height: 36px;
+    width: 88px;
+    border: none;
+    border-radius: 3px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 2px;
+}
+
+ table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  tbody {
+    color: black;
+  }
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: dodgerblue;
+  }
+  tr:nth-child(odd) {
+    background-color: aqua;
+  }
+
+  tr:nth-child(even) td {
+      color: white;
+  }
+
+  hr {
+    margin-right: 150px;
+  }
+
+  .resultBox span {
+    color: mediumblue;
+  }
+
+  .tools button {
+    color: white;
+    background-color: blue;
+    padding: 1vw 1vh;
+    border: none;
+    border-radius: 10%;
+    margin: 1vh 1vw 0 0;
+  }
+
+  .tools {
+    background-color: whitesmoke;
+    position: absolute;
+    right: 0;
+  }
+  .flexing {
+      display: flex;
+  }
+
+  .flexing .btn {
+      margin-left: 1vw;
+  } 
+
+  .content {
+    margin: 0 45px;
+    padding: 50px 0;
+  }
+
+  .pageSystem {
+    display:flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    margin-top: 16px;
+}
+
+.paginationButtons {
+    display: flex;
+}
+
+.pageNo img {
+    height: 37px;
+}
+
+.pageNo,
+.pageNo a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.number {
+    color: white;
+    font-size: 13px;
+}
+
+a .number {
+    color: #4285f4;
+}
+.query {
+    height: 36px;
+    font-size: 14px;
+    outline: none;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #dedede;
+}
+
+#query .btn{
+  vertical-align: baseline;
+}
+
+#pic {
+  background: white;
+  width: 100%;
+  padding: 1%;
+  color: rgba(0, 0, 0,0.6);
+  border-radius: 2%;
+}
+
+th img {
+  max-height: 100px;
+  max-width: 100px;
+}
+
+tr:first-child {
+  background: red;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  color: black;
+  padding: 3vw 3vh;
+  border-radius: 10px;
+}
+.info h1 {
+  margin-bottom: 0;
+}
+.info span {
+  margin: 0.4vw 0.4vh;
+  font-size: 1.5rem;
+}
+
+.priceAmount {
+  color:#B12704;
+}
+.image img {
+  width: 25vw;
+}
+.info hr {
+  margin-right: 150px;
+  width: 100%;
+  background: teal;
+}
+
+.info strong:first-child {
+  color: #4285f4;
+}
+
+.status1 {
+  color: green;
+}
+.status2 {
+  color: red;
+}
+.detailed {
+  color: red;
+}
+
+.availability {
+  color: orangered;
+}
+
+.cartImg { 
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 10vh;
+  border-radius: 15px;
+}
+
+.pBtn {
+  width: fit-content;
+  padding: 5px;
+  position: absolute;
+}
+.glyphicon-search {
+  font-size: 20px;
+}
+.btn-default {
+  background: orange;
+  width: 100px;
+  padding: 14.5px;
+}
+.form-control {
+  padding: 25px;
+  font-size: 20px;
+}
+@media only screen and (max-width: 600px) {
+  .btn-default {
+    width: auto;
+  }
+}
+
+.novalue {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 4vh;
+}
+
+.fixBar {
+  margin-top: 1vh;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}

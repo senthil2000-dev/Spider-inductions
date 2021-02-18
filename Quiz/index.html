@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Quiz</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="sideBar">
+    <div class='toggle-btn' onclick='toggleSidebar()'>
+    <span></span>
+    <span></span>
+    <span></span>
+    </div>
+    <ul id="panel">
+      
+    </ul>
+</div>
+
+<p id="timer"></p>
+<div class='content'>
+  <h5>How well do you know about COVID-19?</h5>
+  <input type="text" class="in" name="nameOfPlayer" placeholder="Enter your name">
+  <button class="btn" onclick="startGame()">PLAY</button>
+<div class="question-card">
+    <div class="inside">
+      <div class="front">
+        <div class='ques'><h3></h3></div>
+       
+        <div class='option' id='1'></div>
+        <div class='option' id='2'></div>
+        <div class='option' id='3'></div>
+        <div class='option' id='4'></div>
+        
+      </div>
+      <div class="back">
+        <h1 id='answer'></h1> 
+        <h1 id='correct'></h1>
+      </div>
+    </div>
+    <a class="prev" onclick="plusQues(-1)">&#10094;</a>
+    <a class="next" onclick="plusQues(1)">&#10095;</a> 
+  </div>
+  <button class="btn done" onclick="displayScore()">Submit</button>
+  </div>
+  <button class="btn regame" onclick="window.location.reload()">Start again</button>
+<script src="questions.js"></script>
+<script src="questionsAndOptions.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

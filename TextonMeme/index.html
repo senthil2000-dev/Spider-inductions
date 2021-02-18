@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme generator</title>
+    <style>
+        .results img {
+            width: 100%;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+        .results {
+            margin: 10px 30%;
+        }
+        
+        @media screen and (max-width: 600px) {
+        .results {
+            margin: 10px;
+        }
+}
+    </style>
+</head>
+<body>
+    
+    <div class='results'>
+
+    </div>
+<script>
+
+res=document.getElementsByClassName("results")[0];
+async function fetchImages() {
+    let resp=await fetch("https://api.imgflip.com/get_memes");
+    let arr=await resp.json();
+    let results=arr.data.memes;
+    results.forEach(element => {
+        res.innerHTML+="<a onclick='move(\""+ element.url+"\")'><img src='"+  element.url+"' title='"+element.name+"'></a>"
+    });
+    console.log(arr);
+    
+}
+fetchImages();
+function move(url) {
+    localStorage.setItem("nameOf", url);
+    window.location.href="edit.html";
+}
+
+</script>
+</body>
+</html>
